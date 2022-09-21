@@ -1,4 +1,4 @@
-const { generateAge, generateNumber, createElement, validateInput } = require('./util');
+const { generateAge, generateNumber, generateMail, createElement, validateInput } = require('./util');
 
 const initApp = () => {
   // Inicia la app y registra los eventos a los botones
@@ -7,8 +7,10 @@ const initApp = () => {
 
   const newPhoneButton = document.querySelector('#btnAddPhone');
   newPhoneButton.addEventListener('click', addPhone);
-};
 
+  const newMailButton = document.querySelector('#btnAddMail');
+  newMailButton.addEventListener('click', addMail);
+};
 
 const addAge = () => {
   const newUserNameInput = document.querySelector('input#name');
@@ -30,7 +32,6 @@ const addAge = () => {
   userList.appendChild(element);
 };
 
-
 const addPhone = () => {
   const newUserNameInput = document.querySelector('input#name');
   const newUserPhoneInput = document.querySelector('input#phone');
@@ -46,6 +47,26 @@ const addPhone = () => {
   const outputText = generateNumber(
     newUserNameInput.value,
     newUserPhoneInput.value
+  );
+  const element = createElement('li', outputText, 'user-item');
+  userList.appendChild(element);
+};
+
+const addMail = () => {
+  const newUserNameInput = document.querySelector('input#name');
+  const newUserMailInput = document.querySelector('input#mail');
+
+  if (
+    !validateInput(newUserNameInput.value, true, false) ||
+    !validateInput(newUserMailInput.value, false, true)
+  ) {
+    return;
+  }
+
+  const userList = document.querySelector('.user-list');
+  const outputText = generateMail(
+    newUserNameInput.value,
+    newUserMailInput.value
   );
   const element = createElement('li', outputText, 'user-item');
   userList.appendChild(element);

@@ -22,6 +22,7 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.0.3",
+    "puppeteer": "^18.2.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.3.12"
   }

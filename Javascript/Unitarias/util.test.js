@@ -1,5 +1,5 @@
 const puppeteer = require('puppeteer');
-const { generateAge, generateNumber, generateMail, checkAndGenerateAge, checkAndGeneratePhone, checkAndGenerateMail } = require('./util')
+const { generateAge, generateNumber, generateMail, checkAndGenerateAge, checkAndGeneratePhone, checkAndGenerateMail, validateInput } = require('./util')
 
 /*------------------
 Pruebas unitarias
@@ -19,7 +19,15 @@ test('debería mostrar el nombre y mail', () => {
     const text = generateMail('Felipe', 'febeja@microsft.com');
     expect(text).toBe('Felipe (Tu correo es: febeja@microsft.com)');
 })
+
+test('prueba para evaluar validateInput', () => {
+    const givenResult = validateInput('', true, false);
+    expect(givenResult).toBe(false);
+})
+
 });
+
+
 
 /*------------------
 Pruebas de integración
@@ -43,7 +51,7 @@ describe('Serie de pruebas de integración', () => {
 
 /*------------------
 Pruebas E2E
---------------------*/
+--------------------
 describe('Serie de pruebas e2e', () => {
     test('probando el formulario de edad', async() => {
         const explore = await puppeteer.launch({
@@ -62,7 +70,7 @@ describe('Serie de pruebas e2e', () => {
         await page.type('input#age', '25');
 
         await page.click('#btnAddAge');
-    }, 10000)
+    }, 11000)
 
     test('probando el formulario de teléfono', async() => {
         const explore = await puppeteer.launch({
@@ -103,4 +111,4 @@ describe('Serie de pruebas e2e', () => {
         await page.click('#btnAddMail');
 
     }, 25000)
-});
+});*/

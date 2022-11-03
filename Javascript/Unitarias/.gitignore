@@ -1,1 +1,7 @@
+# Elimina la carpeta de las dependencias de npm para reducir el tamaño del proyecto
+# sin subir archivos que se pueden instalar
 node_modules
+
+# Elimina la carpeta de los resultados de la cobertura de código
+coverage
+

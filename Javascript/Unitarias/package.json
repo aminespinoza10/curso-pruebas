@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "webpack ./app.js --mode development --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "keywords": [
     "js",
@@ -25,5 +26,9 @@
     "puppeteer": "^18.2.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.3.12"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
   }
 }

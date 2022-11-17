@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" errors="0" time="56.115">
+  <testsuite name="Serie de pruebas unitarias" errors="0" failures="0" skipped="0" timestamp="2022-11-11T17:30:36" time="52.235" tests="7">
+    <testcase classname="Serie de pruebas unitarias debería mostrar el nombre y edad" name="Serie de pruebas unitarias debería mostrar el nombre y edad" time="0.002">
+    </testcase>
+    <testcase classname="Serie de pruebas unitarias debería mostrar el nombre y telefono" name="Serie de pruebas unitarias debería mostrar el nombre y telefono" time="0">
+    </testcase>
+    <testcase classname="Serie de pruebas unitarias debería mostrar el nombre y mail" name="Serie de pruebas unitarias debería mostrar el nombre y mail" time="0">
+    </testcase>
+    <testcase classname="Serie de pruebas unitarias prueba para evaluar validateInput" name="Serie de pruebas unitarias prueba para evaluar validateInput" time="0.001">
+    </testcase>
+    <testcase classname="Serie de pruebas de integración deberá generar una salida de texto válida para la edad" name="Serie de pruebas de integración deberá generar una salida de texto válida para la edad" time="0">
+    </testcase>
+    <testcase classname="Serie de pruebas de integración deberá generar una salida de texto válida para el teléfono" name="Serie de pruebas de integración deberá generar una salida de texto válida para el teléfono" time="0.001">
+    </testcase>
+    <testcase classname="Serie de pruebas de integración deberá generar una salida de texto válida para el correo" name="Serie de pruebas de integración deberá generar una salida de texto válida para el correo" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>

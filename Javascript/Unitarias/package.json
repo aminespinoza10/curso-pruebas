@@ -23,12 +23,14 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.0.3",
+    "jest-junit": "14.0.1",
     "puppeteer": "^18.2.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.3.12"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": ["json", "html"],
+    "reporters": [ "default", "jest-junit" ]
   }
 }
